@@ -1,0 +1,79 @@
+/**
+ * 用于iView主题定制，采用变量覆盖的方式，请参考 https://www.iviewui.com/docs/guide/theme
+ */
+@import '~iview/src/styles/index.less';
+
+@error-color: #e3282d;
+@red-color: #e3282d;
+@text-color: #333333;
+
+// 标签页
+.@{tabs-prefix-cls} {
+  &-nav {
+    .@{tabs-prefix-cls}-tab {
+
+      &:hover {
+        color: @red-color;
+      }
+
+      &:active {
+        color: @red-color;
+      }
+    }
+    .@{tabs-prefix-cls}-tab-active {
+      color: @red-color;
+    }
+  }
+
+  &-ink-bar {
+    height: 3px;
+    background-color: @red-color;
+    top: 0;
+  }
+}
+
+// 提示消息
+.@{message-prefix-cls} {
+  font-size: 14px;
+
+  .@{icon-prefix-cls} {
+    font-size: 24px;
+    top: 4px;
+  }
+
+  &-notice-content {
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &-text {
+      vertical-align: middle;
+      .ivu-message-custom-content {
+        line-height: 26px;
+        * {
+          display: inline-block;
+          vertical-align: middle;
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+// 空列表提示
+.ivu-table-tip {
+  color: #999999;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// table
+.@{table-prefix-cls} {
+  th, td {
+    height: 36px;
+  }
+}

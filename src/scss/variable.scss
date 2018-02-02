@@ -1,0 +1,26 @@
+/**
+ * 定义scss全局变量、函数、混合指令等，方便各个模块统一样式
+ */
+
+// 文字不可选，对于标签页签、链接、菜单、按钮、各种头信息请使用
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// 圆角
+@mixin border-radius($radius: 4px) {
+  border-radius: $radius;
+}
+
+// 图片模糊
+@mixin filter-blur($blur: 2px) {
+  -webkit-filter: blur($blur) brightness(0.9);
+  -moz-filter: blur($blur) brightness(0.9);
+  -ms-filter: blur($blur) brightness(0.9);
+  filter: blur($blur) brightness(0.9);
+}
+
+$red-color: #e3282d;
